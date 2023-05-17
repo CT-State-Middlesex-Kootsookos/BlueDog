@@ -4,7 +4,7 @@
     {
         public AboutViewModel()
         {
-            Title = "Nybble Controller";
+            Title = "Scanner for Petoi";
         }
     }
 }

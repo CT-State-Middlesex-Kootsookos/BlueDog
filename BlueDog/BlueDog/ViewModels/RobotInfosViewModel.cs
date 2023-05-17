@@ -76,7 +76,7 @@ namespace BlueDog.ViewModels
             Bluetooth bluetooth = DependencyService.Get<Bluetooth>();
             foreach (var item in Items)
             {
-                await bluetooth.CallRobot(item.UUID);
+                Task.Run(async () => { await bluetooth.CallRobot(item.UUID); });
             }
         }
 
