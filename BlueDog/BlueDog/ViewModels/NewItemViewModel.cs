@@ -49,11 +49,10 @@ namespace BlueDog.ViewModels
 
         private async void OnSave()
         {
-            Item newItem = new Item()
+            RobotInfo newItem = new RobotInfo()
             {
-                Id = Guid.NewGuid().ToString(),
-                Text = Text,
-                Description = Description
+                UUID = Guid.NewGuid().ToString(),
+                Name = Text
             };
             
             await DataStore.AddItemAsync(newItem);

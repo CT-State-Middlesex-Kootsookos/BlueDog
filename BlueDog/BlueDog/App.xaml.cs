@@ -15,7 +15,9 @@ namespace BlueDog
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            DependencyService.Register<PreferencesDataStore>();
+            DependencyService.Register<Bluetooth>();
+
             MainPage = new AppShell();
         }
 

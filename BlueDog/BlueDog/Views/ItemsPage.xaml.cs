@@ -15,13 +15,13 @@ namespace BlueDog.Views
 {
     public partial class ItemsPage : ContentPage
     {
-        ItemsViewModel _viewModel;
+        RobotInfosViewModel _viewModel;
 
         public ItemsPage()
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ItemsViewModel();
+            BindingContext = _viewModel = new RobotInfosViewModel();
         }
 
         protected override void OnAppearing()

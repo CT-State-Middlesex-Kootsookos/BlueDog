@@ -12,7 +12,7 @@ namespace BlueDog.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<RobotInfo> DataStore => DependencyService.Get<IDataStore<RobotInfo>>();
 
         bool isBusy = false;
         public bool IsBusy

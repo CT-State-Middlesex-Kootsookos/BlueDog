@@ -44,9 +44,9 @@ namespace BlueDog.ViewModels
             try
             {
                 var item = await DataStore.GetItemAsync(itemId);
-                Id = item.Id;
-                Text = item.Text;
-                Description = item.Description;
+                Id = item.UUID;
+                Text = item.Name;
+                Description = "No Description";
             }
             catch (Exception)
             {
