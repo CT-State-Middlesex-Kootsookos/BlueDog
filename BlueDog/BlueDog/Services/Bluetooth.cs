@@ -59,7 +59,7 @@ namespace BlueDog.Services
 
                     if (characteristic.Name.Contains("Unknown"))
                     {
-                        await characteristic.WriteAsync(Encoding.ASCII.GetBytes("kbalance"));
+                        await characteristic.WriteAsync(Encoding.ASCII.GetBytes("kck"));
                         await Task.Delay(1000);
                         for (int i = 0; i < 5; i++)
                         {
@@ -72,6 +72,7 @@ namespace BlueDog.Services
                             await characteristic.WriteAsync(Encoding.ASCII.GetBytes("kzero"));
                             await Task.Delay(1000);
                         }
+                        await characteristic.WriteAsync(Encoding.ASCII.GetBytes("kck"));
                     }
 
                     var descriptors = await characteristic.GetDescriptorsAsync();
