@@ -29,17 +29,27 @@ namespace BlueDog.Views
                 sent.IsVisible = false;
             }
 
+            styledActivityIndicator.IsVisible = true;
+            styledActivityIndicator.IsRunning = true;
+
             Bluetooth scanner = DependencyService.Get<Bluetooth>();
 
             await scanner.ScanForDevices();
+
+            styledActivityIndicator.IsRunning = false;
+            styledActivityIndicator.IsVisible = false;
 
             if (sender is Button)
             {
                 Button sent = (Button)sender;
                 sent.IsVisible = true;
             }
-
         }
 
+        async void Clear_List(System.Object sender, System.EventArgs e)
+        {
+            RobotDataStore dataStore = DependencyService.Get<RobotDataStore>();
+            await dataStore.ClearAllAsync();
+        }
     }
 }

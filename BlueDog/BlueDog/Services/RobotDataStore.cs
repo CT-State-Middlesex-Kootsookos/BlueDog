@@ -81,5 +81,13 @@ namespace BlueDog.Services
         {
             return await Task.FromResult(items);
         }
+
+        public async Task<bool> ClearAllAsync()
+        {
+            items.Clear();
+            Preferences.Set(MY_BLUETOOTH_DEVICES, JsonConvert.SerializeObject(items));
+
+            return await Task.FromResult(true);
+        }
     }
 }

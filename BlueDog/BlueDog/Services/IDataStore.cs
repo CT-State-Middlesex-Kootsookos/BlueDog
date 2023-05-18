@@ -6,6 +6,7 @@ namespace BlueDog.Services
 {
     public interface IDataStore<T>
     {
+        Task<bool> ClearAllAsync();
         Task<bool> AddItemAsync(T item);
         Task<bool> UpdateItemAsync(T item);
         Task<bool> DeleteItemAsync(string id);
