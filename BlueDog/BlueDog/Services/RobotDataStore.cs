@@ -8,14 +8,14 @@ using Xamarin.Essentials;
 
 namespace BlueDog.Services
 {
-    public class PreferencesDataStore : IDataStore<RobotInfo>
+    public class RobotDataStore : IDataStore<RobotInfo>
     {
         const String MY_BLUETOOTH_DEVICES = "my_bluetooth_devices_mk5";
         const String NO_LIST = "no_list";
 
         readonly List<RobotInfo> items;
 
-        public PreferencesDataStore()
+        public RobotDataStore()
         {
 
             if (Preferences.ContainsKey(MY_BLUETOOTH_DEVICES))
