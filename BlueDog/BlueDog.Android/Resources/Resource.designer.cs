@@ -16533,10 +16533,10 @@ namespace BlueDog.Droid
 			public const int design_snackbar_background = 2131165283;
 			
 			// aapt resource value: 0x7F07006B
-			public const int icon_about = 2131165291;
+			public const int icon_dog = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int icon_feed = 2131165292;
+			public const int icon_scan = 2131165292;
 			
 			// aapt resource value: 0x7F070064
 			public const int ic_arrow_down_24dp = 2131165284;
